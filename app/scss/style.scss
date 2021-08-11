@@ -3,8 +3,197 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item:not(:last-child) {
+    padding-right: 35px;
+  }
+
+  &__list-link {
+
+    color: $title;
+    padding-bottom: 1px;
+    text-transform: uppercase;
+    transition: border-bottom 0.3s ease-in-out;
+    @extend %quicksand-400;
+
+    &:hover {
+      color: $accont;
+      border-bottom: 1px solid $accont;
+    }
+  }
+
+  &__list-link--active {
+    color: $accont;
+    border-bottom: 1px solid $accont;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link:not(:last-child) {
+    padding-right: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accont;
+    top: -9px;
+    left: 14px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+footer {
+  background-color: $bg;
+}
+
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+
+  &__contact {
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  &__nav {
+    width: 170px;
+    margin-right: 30px;
+  }
+
+  &__item-form {
+    max-width: 470px;
+  }
+
+  &__logo {
+    margin-bottom: 33px;
+    display: block;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__social-link {
+    transition: all 0.3s;
+
+    path {
+      fill: $defolt;
+    }
+
+    &:hover {
+      path {
+        fill: $accont;
+      }
+    }
+  }
+
+  &__title {
+    color: $title;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    background-color: #fff;
+    max-width: 320px;
+    width: 100%;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+    &::placeholder {
+      color: $defolt;
+      font-size: 16px;
+    }
+  }
+
+  &__form-btn {
+    border: none;
+    background-color: $accont;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  &__accept-img {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  &__accept-img {
+    margin-left: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
 @import 'media';
-
